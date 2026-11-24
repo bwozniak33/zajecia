@@ -364,7 +364,7 @@ div.tocify {
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-report" data-toggle="collapse" data-target="#workflowr-report">
 <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-workflowr <span class="glyphicon glyphicon-exclamation-sign text-danger"
+workflowr <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span>
 </button>
 </p>
@@ -375,8 +375,8 @@ aria-hidden="true"></span>
 </li>
 <li>
 <a data-toggle="tab" href="#checks"> Checks <span
-class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> </a>
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
+</a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -389,9 +389,9 @@ aria-hidden="true"></span> </a>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> 1
+aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>workflowr/</code> <span
@@ -414,21 +414,18 @@ versions</em> tab lists the development history.
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguncommittedchanges">
-<span class="glyphicon glyphicon-exclamation-sign text-danger"
-aria-hidden="true"></span> <strong>R Markdown file:</strong> uncommitted
-changes </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRMarkdownfilestronguptodate">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>R Markdown file:</strong> up-to-date
+</a>
 </p>
 </div>
-<div id="strongRMarkdownfilestronguncommittedchanges"
+<div id="strongRMarkdownfilestronguptodate"
 class="panel-collapse collapse">
 <div class="panel-body">
-<p>The R Markdown is untracked by Git. To know which version of the R
-Markdown file created these results, you’ll want to first commit it to
-the Git repo. If you’re still working on the analysis, you can ignore
-this warning. When you’re finished, you can run
-<code>wflow_publish</code> to commit the R Markdown file and build the
-HTML.</p>
+<p>Great! Since the R Markdown file has been committed to the Git
+repository, you know the exact version of the code that produced these
+results.</p>
 </div>
 </div>
 </div>
@@ -519,15 +516,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcombwozniak33zajeciatree15aa8d1b75d0a7aecef76933a26dce1d95089adatargetblank15aa8d1a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcombwozniak33zajeciatree9d7125e4af3b6488c12f569c13383c2c1b15c4batargetblank9d7125ea">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/bwozniak33/zajecia/tree/15aa8d1b75d0a7aecef76933a26dce1d95089ada" target="_blank">15aa8d1</a>
+<a href="https://github.com/bwozniak33/zajecia/tree/9d7125e4af3b6488c12f569c13383c2c1b15c4ba" target="_blank">9d7125e</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcombwozniak33zajeciatree15aa8d1b75d0a7aecef76933a26dce1d95089adatargetblank15aa8d1a"
+id="strongRepositoryversionstrongahrefhttpsgithubcombwozniak33zajeciatree9d7125e4af3b6488c12f569c13383c2c1b15c4batargetblank9d7125ea"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -537,7 +534,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/bwozniak33/zajecia/tree/15aa8d1b75d0a7aecef76933a26dce1d95089ada" target="_blank">15aa8d1</a>.
+<a href="https://github.com/bwozniak33/zajecia/tree/9d7125e4af3b6488c12f569c13383c2c1b15c4ba" target="_blank">9d7125e</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -560,7 +557,6 @@ Ignored files:
     Ignored:    Moje wideo/
     Ignored:    Niestandardowe szablony pakietu Office/
     Ignored:    workflowr/.Rhistory
-    Ignored:    workflowr/analysis/figure/
 
 Untracked files:
     Untracked:  Rplots.pdf
@@ -574,7 +570,6 @@ Untracked files:
     Untracked:  desktop.ini
     Untracked:  pakiety.bib
     Untracked:  projekt/
-    Untracked:  workflowr/analysis/cw7_bw.Rmd
 
 Unstaged changes:
     Modified:   workflowr/analysis/_site.yml
@@ -593,9 +588,72 @@ have uncommitted changes.
 </div>
 <div id="versions" class="tab-pane fade">
 <p>
-There are no past versions. Publish this analysis with
-<code>wflow_publish()</code> to start tracking its development.
+These are the previous versions of the repository in which changes were
+made to the R Markdown (<code>workflowr/analysis/cw7_bw.Rmd</code>) and
+HTML (<code>workflowr/docs/cw7_bw.html</code>) files. If you’ve
+configured a remote Git repository (see <code>?wflow_git_remote</code>),
+click on the hyperlinks in the table below to view the files as they
+were in that past version.
 </p>
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+File
+</th>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+<th>
+Message
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/bwozniak33/zajecia/blob/9d7125e4af3b6488c12f569c13383c2c1b15c4ba/workflowr/analysis/cw7_bw.Rmd" target="_blank">9d7125e</a>
+</td>
+<td>
+bwozniak33
+</td>
+<td>
+2026-11-24
+</td>
+<td>
+wflow_publish(c("analysis/<em>Rmd", "docs/</em>html"))
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/bwozniak33/zajecia/9d7125e4af3b6488c12f569c13383c2c1b15c4ba/workflowr/docs/cw7_bw.html" target="_blank">9d7125e</a>
+</td>
+<td>
+bwozniak33
+</td>
+<td>
+2026-11-24
+</td>
+<td>
+wflow_publish(c("analysis/<em>Rmd", "docs/</em>html"))
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
 </div>
 </div>
