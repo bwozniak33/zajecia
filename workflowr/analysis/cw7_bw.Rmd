@@ -1,0 +1,61 @@
+---
+title: "cw7"
+author: "Bartłomiej Woźniak"
+date: "2026-11-17"
+output:
+  word_document: default
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+---
+
+### Ćwiczenie 2
+> *Dodaj sekcję opisującą 20 największych diamentów, włączając tabelę wyświetlającą ich najważniejsze atrybuty.*
+
+**Rozwiązanie:**
+Używamy pakietu `dplyr` do przefiltrowania i wybrania 20 największych diamentów (pod względem wagi `carat`), a następnie prezentujemy je za pomocą funkcji `knitr::kable()`.
+
+```r
+## 20 największych diamentów
+
+W tej sekcji przyjrzymy się bliżej rekordzistom pod względem wagi. Tabela poniżej prezentuje 20 największych diamentów w zestawieniu.
+
+```{r najwieksze-diamenty}
+library(dplyr)
+library(ggplot2)
+library(knitr)
+
+top_20_diamentow <- diamonds %>%
+  arrange(desc(carat)) %>%
+  head(20)
+
+kable(
+  top_20_diamentow[, c("carat", "cut", "color", "clarity", "price")],
+  caption = "20 największych diamentów w bazie danych."
+)
+```
