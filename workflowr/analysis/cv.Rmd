@@ -4,7 +4,7 @@ output: html_document
 ---
 
 # Imię Nazwisko
-
+Bartłomiej Woźniak
 **Email:** twoj.email@example.com
 **Telefon:** +48 123 456 789
 **Lokalizacja:** Miasto, Kraj
