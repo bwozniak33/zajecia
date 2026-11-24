@@ -9,6 +9,8 @@ navbar:
     href: about.html
   - text: cw7_bw
     href: cw7_bw.html
+  - text: CV
+    href: cv.html
 output:
   workflowr::wflow_html:
     toc: yes
